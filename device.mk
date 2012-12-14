@@ -192,6 +192,48 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_PACKAGES += \
 	librs_jni \
 	com.android.future.usb.accessory
+	
+# Build.Prop ADDONS
+PRODUCT_PROPERTY_OVERRIDES += \
+    wifi.supplicant_scan_interval=300 \
+    net.bt.name=Android \
+    dalvik.vm.stack-trace-file=/tmp/stack-trace.txt \
+    dalvik.vm.heapstartsize=48m \
+    dalvik.vm.heapgrowthlimit=128m \
+    dalvik.vm.heapsize=384m \
+    dalvik.vm.execution-mode=int:jit \
+    dalvik.vm.dexopt-flags=v=n,o=v,u=n,m=y \
+    dalvik.vm.lockprof.threshold=850 \
+    dalvik.vm.verify-bytecode=false \
+    ro.kernel.android.checkjni=0 \
+    ro.media.enc.jpeg.quality=100 \
+    debug.sf.hw=1 \
+    debug.performance.tuning=1 \
+    video.accelerate.hw=1 \
+    persist.sys.purgeable_assets=1 \
+    windowsmgr.max_events_per_sec=600 \
+    pm.sleep_mode=1 \
+    ro.HOME_APP_ADJ=1 \
+    persist.sys.use_dithering=0 \
+    ro.media.dec.jpeg.memcap=8000000 \
+    ro.media.enc.hprof.vid.bps=8000000 \
+    ro.media.enc.hprof.vid.fps=65 \
+    ro.config.nocheckin=1 \
+    ro.config.vc_call_vol_steps=12 \
+    ring.delay=0 \
+    ro.telephony.call_ring.delay=50 \
+    ro.lge.proximity.delay=20 \
+    mot.proximity.delay=20 \
+    debug.composition.type=gpu \
+    ro.mot.eri.losalert.delay=900 \
+    ro.ril.fast.dormancy.rule=0 \
+    ro.max.fling_velocity=18000 \
+    ro.min.fling_velocity=10000 \
+    ro.semc.xloud.supported=true \
+    persist.service.xloud.enable=1 \
+    ro.semc.sound_effects_enabled=true \
+    ro.service.swiqi.supported=true \
+    persist.service.swiqi.enable=1
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
